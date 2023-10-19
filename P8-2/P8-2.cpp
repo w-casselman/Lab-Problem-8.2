@@ -11,7 +11,19 @@ int countWords(string str);
 
 int main()
 {
-	cout << countWords("Hey girl...");
+	while (true)
+	{
+		string str;
+		cout << "Enter a string or Q to quit: ";
+		getline(cin, str);
+
+		if (str == "Q")
+		{
+			break;
+		}
+
+		cout << "Word count: " << countWords(str) << endl;
+	}
 
 	return 0;
 }
